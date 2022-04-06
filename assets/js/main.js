@@ -17,6 +17,7 @@ $(document).ready(function(){
     /* matchHeight */
         $('.realImg section__img--item').matchHeight();
         $('.section__ttl ').matchHeight();
+        // $('.seller .section__title p').matchHeight();
     /* End matchHeight */
         $('.navbar-nav>li>a').on('click', function(){
             $('.navbar-collapse').collapse('hide');

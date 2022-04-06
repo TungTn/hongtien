@@ -47,6 +47,20 @@ header  {
     text-decoration: none;
     transition: opacity 0.2s ease-out;
 }
+.note {
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+    font-style: italic;
+}
+.desc {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-style: oblique;
+}
 .showed {
     display: block !important;
 }
@@ -210,7 +224,6 @@ li.nav-item {
     padding: 0 25px;
 }
 ul.navbar-nav.mr-auto li a {
-    color: #fff !important;
     /* font-weight: bold; */
     font-size: 18px;
     text-transform: uppercase;
@@ -336,7 +349,7 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: scale-down;
+    max-height: 900px;
 }
 .swiper-pagination-bullets {
     display: flex;
@@ -387,11 +400,72 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
 /* ================== Section Seller ==================== */
 .seller {
     padding: 0 0 70px;
-    background: url(../img/privacy_seller/background.jpg) no-repeat;
+    background: #ebebeb;
     background-size: cover;
     background-position: 50% 50%;
 }
-
+.seller .section__item {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3);
+    padding: 15px 50px 15px 15px;
+    position: relative;
+}
+.seller .section__title {
+    margin-left: 75px;
+}
+.seller .section__title p {
+    font-weight: bold;
+    font-size: 19px;
+    color: #783535;
+    line-height: 1.2;
+}
+.seller .section__item .section__txt p {
+    font-size: 16px;
+    font-weight: normal;
+    color: #783535;
+    margin-top: 5px;
+}
+.seller .note {
+    font-size: 19px;
+    font-weight: bold !important;
+    color: #783535;
+    margin-top: 0 !important;
+    font-style: normal;
+    text-align: left;
+}
+.seller .section__txt {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 75px;
+}
+.seller .section__item:before {
+    content: "";
+    position: absolute;
+    font-size: 70px;
+    left: 10%;
+    color: #783535;
+    font-weight: bold;
+    top: 0;
+}
+.seller .section__item:nth-child(1):before {
+    content: "1";
+}
+.seller .section__item:nth-child(2):before {
+    content: "2";
+}
+.seller .section__item:nth-child(3):before {
+    content: "3";
+}
+.seller .section__item:nth-child(4):before {
+    content: "4";
+}
+.seller .section__item:nth-child(5):before {
+    content: "5";
+}
+.seller .section__item:nth-child(6):before {
+    content: "6";
+}
 /* ================== End Section Seller ==================== */
 
 
@@ -437,6 +511,13 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
     padding: 0 0 70px;
     background-size: cover;
     background-position: 50% 50%;
+}
+.position h3 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: bold;
 }
 .position .section-bg-overlay.absolute.fill {
     background-color: rgba(221, 169, 169, 0.349);
@@ -515,6 +596,9 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
 }
 .floor .section__item .section__txt p {
     margin-top:  0;
+}
+.floor .section__mapfull:last-child {
+    margin-top: 30px;
 }
 /* ================== End Section Floor ==================== */
 
@@ -624,7 +708,7 @@ form#form-contact div {
     flex-direction: column;
 }
 .form__txt {
-    margin-bottom: 30px;
+    margin: 30px 0;
 }
 .form__txt h2 {
     font-family: 'Yeseva One', cursive;
@@ -638,7 +722,7 @@ form#form-contact div {
     background: rgba(0, 38, 79, 0.8);
     display: flex;
     align-items: baseline;
-    padding: 30px;
+    padding: 0 30px;
     margin-top: 150px;
 }
 .swiper-form label {
@@ -662,10 +746,9 @@ form#form-contact div {
     color: #ffffff;
 }
 #btn-send {
-    width: 180px;
-    height: 40px;
     background: url(../img/effect.jpg), linear-gradient(135.91deg, #FDC604 -7.76%, #FF7A00 49.98%, #FFF500 136.6%);
     display: block;
+    padding: 15px;
     color: #ffffff;
     font-size: 13px;
     letter-spacing: 0.01em;
@@ -681,7 +764,7 @@ form#form-contact div {
     transition: 0.4s;
     outline: none;
     border: none;
-    margin-left: auto;
+    margin: 0 auto;
     margin-top: 20px;
     font-size: 16px;
     cursor: pointer;
@@ -691,7 +774,6 @@ form#form-contact div {
     margin-right: 0;
     transition: 0.4s;
     font-weight: bold;
-    width: 80%;
 }
 #btn-send img {
     transition: 0.4s;
@@ -699,7 +781,7 @@ form#form-contact div {
 }
 #btn-send:hover span {
     margin-right: 0;
-    padding-left: 50px;
+    /*padding-left: 50px;*/
     width: 100%;
     display: flex;
     text-align: center;
@@ -710,7 +792,7 @@ form#form-contact div {
     width: 0;
 }
 .form__info--div {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 .form__info--div:nth-child(4) {
     padding-bottom: 0;
