@@ -416,12 +416,12 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
 }
 .seller .section__title p {
     font-weight: bold;
-    font-size: 19px;
+    font-size: 21px;
     color: #783535;
     line-height: 1.2;
 }
 .seller .section__item .section__txt p {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: normal;
     color: #783535;
     margin-top: 5px;
@@ -484,6 +484,7 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
     color: #2e2e2e;
     margin-top: 20px;
     margin-left: 0;
+    font-size: 18px;
 }
 .relative .section__item .section__txt ul li:first-child {
     margin-top: 0;
