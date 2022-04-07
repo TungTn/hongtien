@@ -27,7 +27,6 @@ header  {
     left: 0;
     right: 0;
     width: 100%;
-    background: transparent;
     z-index: 2;
 }
 #backTop {
@@ -54,6 +53,11 @@ header  {
     margin-top: 15px;
     font-style: italic;
 }
+@media screen and (max-width: 767px) {
+    .note {
+        padding-bottom: 15px;
+    }
+}
 .desc {
     text-align: center;
     font-size: 24px;
@@ -71,6 +75,36 @@ header  {
 }
 .owl-carousel.owl-theme.owl-loaded.owl-drag {
     position: relative;
+}
+.item__txt {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    transform: translate(-31%, -29%);
+    color: #fff;
+    background: url(../img/slider/bg_slide.png) no-repeat;
+    background-size: 100% 100%;
+    width: 600px;
+    height: 350px;
+    display: block;
+    z-index: 9;
+}
+h1.item__bg {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+span.ttl {
+    font-size: 45px;
+    line-height: 1;
+    margin-top: 50px;
+    margin-left: 15px;
+    text-shadow: 1px 2px 4px rgb(0 0 0 / 16%);
+    color: #12272e;
+    display: block;
 }
 h2 {
     font-size: 26px;
@@ -140,6 +174,24 @@ h2 {
     flex-wrap: wrap;
     margin-top: 30px;
 }
+.section__item.section__map--sub ul {
+    margin-top: 30px;
+}
+.section__item.section__map--sub ul li span {
+    font-size: 22px;
+    font-weight: bold;
+}
+.section__item.section__map--sub ul li ul {
+    margin-left: 30px;
+    margin-top:  15px;
+}
+.section__item.section__map--sub ul li ul li{
+    padding: 10px;
+    line-height: 1.2;
+    font-size: 18px;
+    color: #000;
+    list-style: disc;
+}
 .section__item.section__map--sub img {
     width: 100%;
 }
@@ -186,7 +238,8 @@ h2 {
         padding: 0 0 10px;
     }
     .title .title__txt b {
-        font-size: 45px;
+        font-size: 35px;
+        line-height: 1.2;
     }
     .title .title__txt span {
         font-size: 40px;
@@ -204,6 +257,10 @@ h2 {
     }
     .section__img {
         width: 100%;
+    }
+    .title .title__txt b {
+        font-size: 28px;
+        line-height: 1.2;
     }
 }
 /* ================== End Common Section =================== */
@@ -272,7 +329,7 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
     z-index: 2;
 }
 .bg-black {
-    z-index: 3;
+    z-index: 999;
     background: linear-gradient(178.03deg, #222539 34.67%, #375178 133.01%);
     display: inline-flex;
     align-items: center;
@@ -280,6 +337,7 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
 }
 .bg-black nav.navbar.navbar-expand-lg.navbar-light {
     align-items: center;
+    padding: 15px 1rem;
 }
 .text-white {
     color: #fff;
@@ -287,6 +345,11 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
 @media screen and (max-width: 1500px) {
     li.nav-item {
         padding: 0 15px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .item__txt {
+        display: none;
     }
 }
 @media screen and (max-width: 479px) {
@@ -427,12 +490,14 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
     margin-top: 5px;
 }
 .seller .note {
-    font-size: 19px;
+    font-size: 28px !important;
     font-weight: bold !important;
     color: #783535;
     margin-top: 0 !important;
     font-style: normal;
     text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 .seller .section__txt {
     width: 100%;
@@ -465,6 +530,28 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
 }
 .seller .section__item:nth-child(6):before {
     content: "6";
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .seller .section__item {
+        width: calc(100% / 2);
+    }
+}
+@media screen and (max-width: 767px) {
+    .seller .section__item {
+        width: 100%;
+    }
+    .seller .section__item:before {
+        left: 0;
+    }
+    .seller .section__title {
+        margin-left: 35px;
+    }
+    .seller .section__txt {
+        margin-left: 35px;
+    }
+    .seller .note {
+        margin-top: 15px !important;
+    }
 }
 /* ================== End Section Seller ==================== */
 
@@ -594,6 +681,7 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
 }
 .floor .section__item .section__txt span {
     color: #000;
+    font-size: 18px;
 }
 .floor .section__item .section__txt p {
     margin-top:  0;
@@ -896,7 +984,7 @@ footer .copyright {
     footer .footer-info {
         flex-direction: column;
     }
-    .footer-info .col-sm-12 {
+    .footer-info .col-md-4 {
         margin-bottom: 30px;
     }
 }
