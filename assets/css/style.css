@@ -345,7 +345,6 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
     }
     span.ttl {
         font-size: 45px;
-        color: #000;
     }
 }
 @media screen and (max-width: 479px) {
