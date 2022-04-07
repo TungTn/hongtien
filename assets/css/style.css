@@ -457,7 +457,7 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
 }
 @media screen and (max-width: 767px) {
     .swiper-slide img {
-        height: 90vh;
+        height: 85vh;
         object-fit: cover;
     }
 }
