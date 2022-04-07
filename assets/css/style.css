@@ -1545,7 +1545,11 @@ div#phonering-alo-phoneIcon {
 }
 @media screen and (max-width: 767px) {
     #zalo-vr {
-        right: 0;
-        bottom: 60px;
+        left: 5px;
+        bottom: 100px;
+    }
+    div#phonering-alo-phoneIcon {
+        left: -50px;
+        bottom: 150px;
     }
 }
