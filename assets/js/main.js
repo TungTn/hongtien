@@ -2,7 +2,7 @@ $(document).ready(function(){
     /* Carousel */
         var swiper = new Swiper(".mySwiper", {
             loop: true,
-            autoplay : false,
+            autoplay : true,
             effect: 'fadeOut',
             fadeEffect: {
                 crossFade: true

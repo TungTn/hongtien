@@ -27,7 +27,7 @@ header  {
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 99999;
 }
 #backTop {
     display: none;
@@ -79,31 +79,21 @@ header  {
 .item__txt {
     position: absolute;
     top: 15%;
-    left: 15%;
-    transform: translate(-31%, -29%);
+    left: 5%;
     color: #fff;
-    background: url(../img/slider/bg_slide.png) no-repeat;
-    background-size: 100% 100%;
-    width: 600px;
-    height: 350px;
     display: block;
-    z-index: 9;
+    z-index: 9999;
 }
 h1.item__bg {
-    position: absolute;
     text-align: center;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
 }
 span.ttl {
-    font-size: 45px;
+    font-size: 75px;
     line-height: 1;
     margin-top: 50px;
     margin-left: 15px;
     text-shadow: 1px 2px 4px rgb(0 0 0 / 16%);
-    color: #12272e;
+    color: #ffffff;
     display: block;
 }
 h2 {
@@ -151,7 +141,7 @@ h2 {
 }
 .title .title__txt b {
     font-family: "Montserrat-Bold";
-    font-size: 55px;
+    font-size: 50px;
     line-height: 70px;
     text-transform: uppercase;
     color: #2e2e2e;
@@ -281,6 +271,7 @@ li.nav-item {
     padding: 0 25px;
 }
 ul.navbar-nav.mr-auto li a {
+    color: #fff !important;
     /* font-weight: bold; */
     font-size: 18px;
     text-transform: uppercase;
@@ -329,7 +320,7 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
     z-index: 2;
 }
 .bg-black {
-    z-index: 999;
+    z-index: 99999;
     background: linear-gradient(178.03deg, #222539 34.67%, #375178 133.01%);
     display: inline-flex;
     align-items: center;
@@ -349,7 +340,12 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
 }
 @media screen and (max-width: 767px) {
     .item__txt {
-        display: none;
+        top: 10%;
+        left: 0;
+    }
+    span.ttl {
+        font-size: 45px;
+        color: #000;
     }
 }
 @media screen and (max-width: 479px) {
@@ -383,6 +379,16 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
 /* ================== Section Slide ==================== */
 .section.slide {
     padding:  0;
+}
+.slide .section-bg-overlay.absolute.fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: #00000052;
+    z-index: 999;
 }
 .swiper {
     width: 100%;
@@ -492,7 +498,7 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
 .seller .note {
     font-size: 28px !important;
     font-weight: bold !important;
-    color: #783535;
+    color: #375822 !important;
     margin-top: 0 !important;
     font-style: normal;
     text-align: left;
@@ -746,6 +752,7 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
 }
 .prod .section__item .section__txt span {
     color: #fff;
+    font-size: 18px;
 }
 .prod .section__item .section__txt p {
     margin-top:  0;
@@ -1447,56 +1454,99 @@ div#phonering-alo-phoneIcon {
                 transform:rotate(0) scale(1) skew(1deg)
     }
 }
-.sticky-container {
-    padding: 0px;
-    margin: 0px;
+#zalo-vr {
+    transition: 1s all;
+    -moz-transition: 1s all;
+    -webkit-transition: 1s all;
+    right: 20px;
     position: fixed;
-    right: 70px;
-    bottom: 10px;
-    z-index: 9;
+    right: 75px;
+    bottom: 20px;
+    z-index: 99999999999999;
+    text-align: center;
+    cursor: pointer;
 }
-.sticky-container .sticky li {
-    display: block;
-    margin: 5px 0;
-    line-height: 120%;
-}
-.icon-fix-right a {
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    display: inline-block;
-    border-radius: 50%;
-}
-.icon-fix-right .icon-cm {
-    width: 100px;
-    height: 100px;
-}
-.icon-cm {
-    border-radius: 50%;
-    background-color: #EC7190;
+.button-contact {
     position: relative;
-    overflow: hidden;
+}
+.button-contact .phone-vr {
+    position: relative;
+    visibility: visible;
+    background-color: transparent;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    z-index: 11;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transition: visibility .5s;
+    left: 0;
+    bottom: 0;
     display: block;
 }
-.icon-zalo:before {
-    background: url(../img/icon/icon-zalo.svg) no-repeat center center;
-    background-size: 100%;
+.phone-vr-circle-fill {
+    width: 90px;
+    height: 90px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    box-shadow: 0 0 0 0 #c31d1d;
+    background-color: rgba(230, 8, 8, 0.7);
+    border-radius: 50%;
+    border: 2px solid transparent;
+    -webkit-animation: phonering-alo-circle-anim 2.3s infinite ease-in-out;
+    animation: phonering-alo-circle-anim 2.3s infinite ease-in-out;
+    transition: all .5s;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-animuiion: phonering-alo-circle-anim 1.3s infinite;
+    animation: phonering-alo-circle-anim 1.3s infinite;
+}
+#zalo-vr .phone-vr-circle-fill {
+    box-shadow: 0 0 0 0 #2196f3;
+    background-color: rgba(33, 150, 243, 0.7);
+}
+.phone-vr-img-circle {
+    background-color: #e60808;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    top: 25px;
+    left: 25px;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    -webkit-animation: phonering-alo-circle-anim 1.2s infinite ease-in-out
+    animation: phonering-alo-circle-anim 1.2s infinite ease-in-out
+}
+#zalo-vr .phone-vr-img-circle {
+    background-color: #2196F3;
+}
+.phone-vr-img-circle a {
+    display: block;
+    line-height: 37px;
+}
+.phone-vr-img-circle img {
+    max-height: 25px;
+    max-width: 27px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 400ms;
+    transition-delay: 0ms;
 }
 @media screen and (max-width: 767px) {
-    .sticky-container {
-        right: 15px;
-        bottom: 75px;
-    }
-    .icon-fix-right a {
-        width: 50px;
-        height: 50px;
-    }
-    .icon-fix-right .icon-cm {
-        width: 50px;
-        height: 50px;
-    }
-    div#phonering-alo-phoneIcon {
-        left: -25px;
-        bottom: 175px;
+    #zalo-vr {
+        right: 0;
+        bottom: 60px;
     }
 }
