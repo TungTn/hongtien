@@ -1053,14 +1053,12 @@ div#phonering-alo-phoneIcon {
 }
 
 .phonering-alo-phone.phonering-alo-green.phonering-alo-hover .phonering-alo-ph-circle,.phonering-alo-phone.phonering-alo-green:hover .phonering-alo-ph-circle {
-    border-color:#75eb50 ;
-    border-color:#baf5a7;
+    border-color: #e55289;
     opacity:.5
 }
 
 .phonering-alo-phone.phonering-alo-green .phonering-alo-ph-circle {
-    border-color:#00aff2 ;
-    border-color:#bfebfc;
+    border-color: #e55289;
     opacity:.5
 }
 
@@ -1115,7 +1113,7 @@ div#phonering-alo-phoneIcon {
 }
 
 .phonering-alo-phone.phonering-alo-green .phonering-alo-ph-circle-fill {
-    background-color:rgba(0,175,242,0.5);
+    background-color: #e55289;
     background-color:#a6e3fa 9
 }
 
@@ -1161,13 +1159,11 @@ div#phonering-alo-phoneIcon {
 }
 
 .phonering-alo-phone.phonering-alo-green.phonering-alo-hover .phonering-alo-ph-img-circle,.phonering-alo-phone.phonering-alo-green:hover .phonering-alo-ph-img-circle {
-    background-color:#75eb50;
-    background-color:#75eb50 9
+    background-color: #e55289;
 }
 
 .phonering-alo-phone.phonering-alo-green .phonering-alo-ph-img-circle {
-    background-color:#00aff2;
-    background-color:#00aff2 9
+    background-color: #e55289;
 }
 
 .phonering-alo-phone.phonering-alo-gray.phonering-alo-hover .phonering-alo-ph-img-circle,.phonering-alo-phone.phonering-alo-gray:hover .phonering-alo-ph-img-circle {
