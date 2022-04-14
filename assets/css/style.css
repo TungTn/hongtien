@@ -541,7 +541,15 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
         width: calc(100% / 2);
     }
 }
+@media screen and (min-width: 768px) {
+    [block-sc-sp] {
+        display: none !important;
+    }
+}
 @media screen and (max-width: 767px) {
+    [block-sc-pc] {
+        display: none !important;
+    }
     .seller .section__item {
         width: 100%;
     }
@@ -840,7 +848,7 @@ form#form-contact div {
     background: transparent;
     color: #ffffff;
 }
-#btn-send {
+.btn-send {
     background: url(../img/effect.jpg), linear-gradient(135.91deg, #FDC604 -7.76%, #FF7A00 49.98%, #FFF500 136.6%);
     display: block;
     padding: 15px;
@@ -864,27 +872,35 @@ form#form-contact div {
     font-size: 16px;
     cursor: pointer;
 }
-#btn-send span {
+.btn-send span {
     font-family: Montserrat-Bold;
     margin-right: 0;
     transition: 0.4s;
     font-weight: bold;
 }
-#btn-send img {
+.btn-send img {
     transition: 0.4s;
     width: 50%;
 }
-#btn-send:hover span {
+.btn-send:hover span {
     margin-right: 0;
     /*padding-left: 50px;*/
     width: 100%;
     display: flex;
     text-align: center;
 }
-#btn-send:hover img {
+.btn-send:hover img {
     opacity: 0;
     visibility: hidden;
     width: 0;
+}
+.btn-slide {
+    font-family: 'Open Sans';
+    background-size: 50% 100%;
+    background-position: center;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
 }
 .form__info--div {
     padding-bottom: 20px;
