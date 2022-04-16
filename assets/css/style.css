@@ -347,7 +347,7 @@ ul.navbar-nav.mr-auto li a.phone:hover span {
         font-size: 45px;
     }
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 479px) {    
     nav.navbar.navbar-expand-lg.navbar-light a.navbar-brand img {
         width: 50%;
     }
@@ -895,12 +895,13 @@ form#form-contact div {
     width: 0;
 }
 .btn-slide {
-    font-family: 'Open Sans';
+    font-family: inherit;
     background-size: 50% 100%;
     background-position: center;
     border-radius: 15px;
     overflow: hidden;
     width: 100%;
+    font-size: 18px;
 }
 .form__info--div {
     padding-bottom: 20px;
@@ -1563,5 +1564,10 @@ div#phonering-alo-phoneIcon {
     div#phonering-alo-phoneIcon {
         left: -50px;
         bottom: 150px;
+    }
+}
+@media screen and (max-width: 479px) {
+    .btn-slide {
+        background-size: 80% 100%;
     }
 }
